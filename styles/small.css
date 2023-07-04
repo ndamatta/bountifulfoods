@@ -5,7 +5,7 @@ body {
 /* HEADER */
 .home-header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     background-color: #DD0426;
     font-family: 'Signika Negative', sans-serif;
     padding-top: .5rem;
@@ -18,7 +18,7 @@ body {
     margin-right: 1rem;
     width: 100%;
 }
-.home-header .logo img {width: 60%;}
+.home-header .logo img {width: 70%;}
 .home-header h1 {
     grid-column: 2;
     color: white;
@@ -32,8 +32,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-.home-header .social-media a {margin: .4rem;}
-.home-header .social-media a img {width: 110%;}
+.home-header .social-media a {margin: .5rem;}
+.home-header .social-media a img {width: 85%;}
 nav {
     grid-column: 1/4;
     grid-row: 2;
