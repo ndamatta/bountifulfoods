@@ -30,7 +30,7 @@ body {
     grid-column: 3;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 .home-header .social-media a {margin: .5rem;}
 .home-header .social-media a img {width: 85%;}
