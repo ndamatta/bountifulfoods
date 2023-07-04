@@ -8,7 +8,7 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #DD0426;
     font-family: 'Signika Negative', sans-serif;
-    padding: .5rem;
+    padding-top: .5rem;
 }
 .home-header .logo {
     grid-column: 1;
@@ -16,13 +16,15 @@ body {
     align-items: center;
     justify-content: right;
     margin-right: 1rem;
+    width: 100%;
 }
+.home-header .logo img {width: 60%;}
 .home-header h1 {
     grid-column: 2;
     color: white;
     text-align: left;
     margin: .3rem;
-
+    font-size: 1.35rem;
 }
 .home-header .social-media {
     grid-column: 3;
@@ -31,3 +33,33 @@ body {
     justify-content: center;
 }
 .home-header .social-media a {margin: .4rem;}
+.home-header .social-media a img {width: 110%;}
+nav {
+    grid-column: 1/4;
+    grid-row: 2;
+    background-color: #F02D3A;
+    margin-top: 1rem;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul {display: none;}
+nav ul.open {display: block;}
+nav ul li a {
+    display: block;
+    padding: .8rem;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav button {
+    margin: .2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
