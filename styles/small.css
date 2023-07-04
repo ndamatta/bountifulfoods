@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-size: 16px;
+}
+/* HEADER */
+.home-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #DD0426;
+    font-family: 'Signika Negative', sans-serif;
+    padding: .5rem;
+}
+.home-header .logo {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 1rem;
+}
+.home-header h1 {
+    grid-column: 2;
+    color: white;
+    text-align: left;
+    margin: .3rem;
+
+}
+.home-header .social-media {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-header .social-media a {margin: .4rem;}
