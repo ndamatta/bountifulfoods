@@ -32,7 +32,11 @@ header .social-media {
     align-items: center;
     justify-content: right;
 }
-header .social-media a {margin: .5rem;}
+header .social-media a {
+    margin: .5rem;
+    transition: transform .1s;
+}
+header .social-media a:hover {transform: scale(1.1);}
 header .social-media a img {width: 85%;}
 nav {
     grid-column: 1/4;
@@ -45,7 +49,7 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-nav ul {display: none;}
+nav ul {display: none; padding-bottom: .2rem;}
 nav ul.open {display: block;}
 nav ul li a {
     display: block;
@@ -53,8 +57,13 @@ nav ul li a {
     text-decoration: none;
     color: white;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform .1s;
 }
-nav ul li a:hover, nav ul li.active {background-color: #DD0426;}
+nav ul li a:hover, nav ul li.active {
+    background-color: #DD0426;
+    transform: scale(1.1);
+
+}
 nav button {
     margin: .2rem;
     background-color: transparent;
@@ -90,6 +99,8 @@ footer .address, footer .phone, footer .email {
     margin: .3rem;
     font-size: .8rem;
 }
+footer .address {transition: transform .1s;}
+footer .address:hover{transform: scale(1.03);}
 footer .contact-info1 {
     display: flex;
     flex-direction: column;
