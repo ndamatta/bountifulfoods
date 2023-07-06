@@ -3,14 +3,14 @@ body {
     font-size: 16px;
 }
 /* HEADER */
-.home-header {
+header {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     background-color: #DD0426;
     font-family: 'Signika Negative', sans-serif;
     padding-top: .5rem;
 }
-.home-header .logo {
+header .logo {
     grid-column: 1;
     display: flex;
     align-items: center;
@@ -18,22 +18,22 @@ body {
     margin-right: 1rem;
     width: 100%;
 }
-.home-header .logo img {width: 70%;}
-.home-header h1 {
+header .logo img {width: 70%;}
+header h1 {
     grid-column: 2;
     color: white;
     text-align: left;
     margin: .3rem;
     font-size: 1.35rem;
 }
-.home-header .social-media {
+header .social-media {
     grid-column: 3;
     display: flex;
     align-items: center;
     justify-content: right;
 }
-.home-header .social-media a {margin: .5rem;}
-.home-header .social-media a img {width: 85%;}
+header .social-media a {margin: .5rem;}
+header .social-media a img {width: 85%;}
 nav {
     grid-column: 1/4;
     grid-row: 2;
