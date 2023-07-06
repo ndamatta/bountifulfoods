@@ -71,18 +71,36 @@ footer {
     background-color: #DD0426;
     font-family: 'Montserrat', sans-serif;
     margin-top: 10rem;
-    
+    font-size: .85rem;
 }
 footer h3 {
     grid-column: 2;
     color: white;
     text-align: center;
     margin: .3rem;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
 }
-footer .address a {
+footer .address a, footer .phone, footer .email {
     color: white;
     background-color: #F02D3A;
     padding: .3rem;
     border-radius: 10px;
+    margin: .3rem;
+    font-size: .9rem;
+}
+footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+footer .my-info {
+    background-color: #F02D3A;
+    border-top: 1px dashed white;
+    color: white;
+    font-size: .65rem;
+}
+footer .my-info p {
+    margin: .3rem;
 }
