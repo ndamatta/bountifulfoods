@@ -54,6 +54,7 @@ nav ul li a {
     color: white;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
+nav ul li a:hover, nav ul li.active {background-color: #DD0426;}
 nav button {
     margin: .2rem;
     background-color: transparent;
