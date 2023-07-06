@@ -63,3 +63,26 @@ nav button {
 }
 #hamburgerBtn span:nth-child(1) {display: block;}
 #hamburgerBtn span:nth-child(2) {display: none;}
+
+/* FOOTER */
+footer {
+    display: grid;
+    grid-template-columns: 1;
+    background-color: #DD0426;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10rem;
+    
+}
+footer h3 {
+    grid-column: 2;
+    color: white;
+    text-align: center;
+    margin: .3rem;
+    font-size: 1.35rem;
+}
+footer .address a {
+    color: white;
+    background-color: #F02D3A;
+    padding: .3rem;
+    border-radius: 10px;
+}
