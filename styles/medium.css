@@ -21,13 +21,22 @@
     footer {
         grid-template-columns: 1fr 1fr;
     }
-    footer h3 {font-size: 1.55rem;}
+    footer h2 {
+        font-size: 1.55rem;
+    }
     footer .title {
         grid-column: 1;
     }
     footer .contact-info1 {
         grid-column: 2;
         grid-row: 1/3;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    footer .address, footer .phone, footer .email {
+        font-size: .8rem;
+        padding: .5rem;
     }
     footer .my-info {
         grid-column: 1/3;

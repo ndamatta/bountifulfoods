@@ -74,20 +74,21 @@ footer {
     margin-top: 10rem;
     font-size: .85rem;
 }
-footer h3 {
+footer h2 {
     grid-column: 2;
+    font-family: 'Signika Negative', sans-serif;
     color: white;
     text-align: center;
     margin: .3rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
-footer .address a, footer .phone, footer .email {
+footer .address, footer .phone, footer .email {
     color: white;
     background-color: #F02D3A;
     padding: .3rem;
     border-radius: 10px;
     margin: .3rem;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 footer .contact-info1 {
     display: flex;
