@@ -1,6 +1,6 @@
 @media screen and (min-width: 64rem) {
-    .home-header h1 {font-size: 2rem}
-    .home-header .logo img {width: 30%;}
-    .home-header .social-media a img {width: 100%;}
+    header h1 {font-size: 2rem}
+    header .logo img {width: 30%;}
+    header .social-media a img {width: 100%;}
 
 }
