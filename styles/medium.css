@@ -42,4 +42,28 @@
         grid-column: 1/3;
         grid-row: 4;
     }
+
+    /* HOME - main */
+    .home-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .home-main .area-info {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    .home-main .calltoaction {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .home-main .drinks {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .home-main .weather {
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+
 }
