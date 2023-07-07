@@ -9,6 +9,7 @@ header {
     background-color: #DD0426;
     font-family: 'Signika Negative', sans-serif;
     padding-top: .5rem;
+    margin-bottom: 2rem;
 }
 header .logo {
     grid-column: 1;
@@ -80,7 +81,7 @@ footer {
     grid-template-columns: 1;
     background-color: #DD0426;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 10rem;
+    margin-top: 2rem;
     font-size: .85rem;
 }
 footer h2 {
@@ -116,4 +117,42 @@ footer .my-info {
 }
 footer .my-info p {
     margin: .3rem;
+}
+
+/* HOME - hero */
+body main .calltoaction {
+    position: relative;
+    padding: 0;
+    background-color: #F02D3A;
+}
+.calltoaction img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-main a {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    background-color: white;
+    padding: .8rem;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #F02D3A;
+    box-shadow: 3px 3px 5px 1px #333;
+    transition: transform .1s;
+}
+.home-main a:hover {transform: scale(1.05);}
+
+/* HOME - main */
+.home-main {
+    font-family: 'Montserrat', sans-serif;
+}
+.home-main div {
+    background-color: #f18a91;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px 1px gray;
 }
