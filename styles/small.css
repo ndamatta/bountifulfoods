@@ -148,7 +148,7 @@ body main .calltoaction {
 .home-main {
     font-family: 'Montserrat', sans-serif;
 }
-.home-main div {
+.home-main > div {
     background-color: #f18a91;
     margin: 1rem;
     padding: 1rem 1rem;
@@ -156,3 +156,5 @@ body main .calltoaction {
     border: 1px solid black;
     box-shadow: 3px 3px 5px 1px gray;
 }
+
+/* HOME - weather */
