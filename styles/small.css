@@ -149,7 +149,7 @@ body main .calltoaction {
     font-family: 'Montserrat', sans-serif;
 }
 .home-main > div {
-    background-color: #f18a91;
+    background-color: #F8A0A7;
     margin: 1rem;
     padding: 1rem 1rem;
     text-align: center;
@@ -160,7 +160,7 @@ body main .calltoaction {
     margin: 0 0 1rem 0;
     font-family: 'Signika Negative', sans-serif;
     color: white;
-    text-shadow: 0 0 3px #DD0426, 0 0 5px black;
+    text-shadow: 0 1px 3px black, 0 3px 3px black;
 
 }
 
@@ -172,8 +172,8 @@ body main .calltoaction {
 #current-weather {
     display: grid;
     grid-template-columns: 1fr;
-    border: 1px solid black;
-    width: 80%;
+    border: 2px dashed white;
+    border-radius: 10px;
 }
 #current-weather h3 {
     grid-column: 1;
@@ -209,7 +209,9 @@ body main .calltoaction {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px dashed white;
+    border-radius: 10px;
+    margin-top: .5rem;
 
 }
 .forecast-card {
