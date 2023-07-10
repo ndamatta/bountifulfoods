@@ -94,12 +94,14 @@ footer h2 {
     font-size: 1.25rem;
 }
 footer .address, footer .phone, footer .email {
-    color: white;
-    background-color: #F02D3A;
-    padding: .3rem;
+    color: black;
+    background-color: white;
+    padding: .25rem;
     border-radius: 10px;
+    border: 1px solid black;
     margin: .3rem;
-    font-size: .8rem;
+    font-size: .9rem;
+    font-weight: bold;
 }
 footer .address {transition: transform .1s;}
 footer .address:hover{transform: scale(1.03);}
@@ -113,8 +115,8 @@ footer .contact-info1 {
 footer .my-info {
     background-color: #F02D3A;
     border-top: 1px dashed white;
-    color: white;
-    font-size: .65rem;
+    color: black;
+    font-size: .8rem;
 }
 footer .my-info p {
     margin: .3rem;
@@ -139,9 +141,10 @@ body main .calltoaction {
     padding: .8rem;
     text-decoration: none;
     border-radius: 50px;
-    color: #F02D3A;
+    color: black;
     box-shadow: 3px 3px 5px 1px #333;
     transition: transform .1s;
+    font-weight: bold;
 }
 .home-main a:hover {transform: scale(1.05);}
 
@@ -174,7 +177,7 @@ body main .calltoaction {
 #current-weather {
     display: grid;
     grid-template-columns: 1fr;
-    border: 2px dashed white;
+    border: 2px dashed black;
     border-radius: 10px;
     padding: .2rem;
 }
@@ -190,6 +193,7 @@ body main .calltoaction {
 #current-weather-img img, .forecast-weather img {
     background-color: #F02D3A;
     border-radius: 50px;
+    border: 1px solid black;
 }
 #current-weather-section {
     grid-column: 1;
@@ -203,8 +207,9 @@ body main .calltoaction {
 #current-weather-section p, .forecast-weather .forecast-section p {
     margin: .15rem;
     padding: .1rem .7rem .1rem .7rem;
-    background-color: #F02D3A;
+    background-color: #DD0426;
     color: white;
+    border: 1px solid black;
     border-radius: 20px 0 20px 0;
 }
 .forecast-weather {
@@ -212,7 +217,7 @@ body main .calltoaction {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px dashed white;
+    border: 2px dashed black;
     border-radius: 10px;
     margin-top: .5rem;
     padding: .2rem;
