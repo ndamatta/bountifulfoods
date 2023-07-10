@@ -70,7 +70,7 @@ function getWeatherForecast() {
           `
           <h3>${dayOfWeek}</h3>
           <div class="forecast-img">
-            <img src="https://openweathermap.org/img/w/${image}.png" alt="Image of ${description}">
+            <img src="https://openweathermap.org/img/w/${image}.png" alt="Image representing the weather: ${description}">
           </div>
           <div class="forecast-section">
             <p>${temperature.toFixed(1)} °F</p>
