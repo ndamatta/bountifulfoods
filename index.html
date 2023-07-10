@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/large.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&display=swap" rel="stylesheet">
-    <meta name="description" content="Home page of Bountiful Foods.The header shows the company logo, company name, social media links, and a nav bar. The main section shows a call to action to the Fresh Page, a section displaying information about the drinks and a weather section.">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>[Home] Bountiful Foods</title>
-</head>
-<body>
-    <header>
-        <div class="logo"><img src="images/logo.webp" alt="Logo Bountiful Foods"></div>
-        <div>
-            <h1>Bountiful</h1>
-            <h1>Foods</h1>
-        </div>
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.webp" alt="Facebook Logo"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.webp" alt="Instagram Logo"></a>
-            <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.webp" alt="Linkedin Logo"></a>
-        </div>
-        <nav>
-            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-            <ul id="mainNav">
-                <li class="active"><a href="./">Home</a></li>
-                <li><a href="fresh.html">Fresh</a></li>
-                <li><a href="aboutus.html">About us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&display=swap" rel="stylesheet">
+        <meta name="description" content="Home page of Bountiful Foods.The header shows the company logo, company name, social media links, and a nav bar. The main section shows a call to action to the Fresh Page, a section displaying information about the drinks and a weather section.">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="scripts/main.js"></script>
+        <script src="scripts/weather.js"></script>
+        <title>[Home] Bountiful Foods</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="images/logo.webp" alt="Logo Bountiful Foods"></div>
+            <div>
+                <h1>Bountiful</h1>
+                <h1>Foods</h1>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.webp" alt="Facebook Logo"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.webp" alt="Instagram Logo"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.webp" alt="Linkedin Logo"></a>
+            </div>
+            <nav>
+                <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+                <ul id="mainNav">
+                    <li class="active"><a href="./">Home</a></li>
+                    <li><a href="fresh.html">Fresh</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="home-main">
-        <div class="area-info">
-            <h2>About Carlsbad!</h2>
-            <p>The city is a scenic coastal city known for its beautiful beaches, mild climate, and attractions like <b>LEGOLAND</b> and the <b>Flower Fields</b>. With seven miles of sandy shoreline, it's a popular destination for <b>sunbathing</b>, <b>surfing</b>, and enjoying <b>breathtaking sunsets</b>. The city also offers a vibrant arts and culture scene, outdoor activities like hiking and birdwatching, and is home to the Museum of Making Music. And of course, <b>the best place to buy your food!</b></p>
-        </div>
+        <main class="home-main">
+            <div class="area-info">
+                <h2>About Carlsbad!</h2>
+                <p>The city is a scenic coastal city known for its beautiful beaches, mild climate, and attractions like <b>LEGOLAND</b> and the <b>Flower Fields</b>. With seven miles of sandy shoreline, it's a popular destination for <b>sunbathing</b>, <b>surfing</b>, and enjoying <b>breathtaking sunsets</b>. The city also offers a vibrant arts and culture scene, outdoor activities like hiking and birdwatching, and is home to the Museum of Making Music. And of course, <b>the best place to buy your food!</b></p>
+            </div>
 
-        <div class="calltoaction">
-            <picture>
-                <source media="(max-width: 559px)" srcset="images/calltoaction-small.png">
-                <source media="(max-width: 1023px)" srcset="images/calltoaction-medium.png">
-                <img src="images/calltoaction-large.png" alt="Drink Image">
-            </picture>
-            <a class="calltoactionBtn" href="fresh.html">Build my drink!</a>
-        </div>
+            <div class="calltoaction">
+                <picture>
+                    <source media="(max-width: 559px)" srcset="images/calltoaction-small.png">
+                    <source media="(max-width: 1023px)" srcset="images/calltoaction-medium.png">
+                    <img src="images/calltoaction-large.png" alt="Drink Image">
+                </picture>
+                <a class="calltoactionBtn" href="fresh.html">Build my drink!</a>
+            </div>
 
-        <div class="drinks">
-            <h2>Drink Card</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis!</p>
-        </div>
+            <div class="drinks">
+                <h2>Drink Card</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis!</p>
+            </div>
 
-        <div class="weather">
-            <h2>Carlsbad Weather</h2>
-        </div>
-    </main>
+            <div class="weather">
+                <h2>Carlsbad Weather</h2>
+            </div>
+        </main>
 
-    <footer>
-        <div class="title">
-            <h2>Bountiful</h2>
-            <h2>Foods</h2>
-        </div>
-        <div class="contact-info1">
-            <a class="address" href="https://goo.gl/maps/w7kyiV17vm6Y38147" target="_blank">Go to Address</a>
-            <p class="email">contact@bountifulfoods.com</p>
-            <p class="phone">(760) 268-5555</p>
-        </div>
-        <div class="my-info">
-            <p class="name">Natanael da Matta</p>
-            <p class="copyright">&copy; <span id="currentyear"></span> Bountiful Foods </p>
-            <p class="lastmodified"></p>
-        </div>
-    </footer>
-</body>
-<script src="scripts/main.js"></script>
-<script src="scripts/weather.js"></script>
+        <footer>
+            <div class="title">
+                <h2>Bountiful</h2>
+                <h2>Foods</h2>
+            </div>
+            <div class="contact-info1">
+                <a class="address" href="https://goo.gl/maps/w7kyiV17vm6Y38147" target="_blank">Go to Address</a>
+                <p class="email">contact@bountifulfoods.com</p>
+                <p class="phone">(760) 268-5555</p>
+            </div>
+            <div class="my-info">
+                <p class="name">Natanael da Matta</p>
+                <p class="copyright">&copy; <span id="currentyear"></span> Bountiful Foods </p>
+                <p class="lastmodified"></p>
+            </div>
+        </footer>
+    </body>
 </html>

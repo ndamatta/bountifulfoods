@@ -56,15 +56,16 @@ nav ul li a {
     display: block;
     padding: .8rem;
     text-decoration: none;
-    color: white;
+    color: black;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform .1s;
 }
-nav ul li a:hover, nav ul li.active {
+nav ul li a:hover, .active {
     background-color: #DD0426;
+    color: white;
     transform: scale(1.1);
-
 }
+.active > a {color: white;}
 nav button {
     margin: .2rem;
     background-color: transparent;
@@ -78,7 +79,7 @@ nav button {
 /* FOOTER */
 footer {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     background-color: #DD0426;
     font-family: 'Montserrat', sans-serif;
     margin-top: 2rem;
@@ -159,8 +160,8 @@ body main .calltoaction {
 .home-main > div > h2 {
     margin: 0 0 1rem 0;
     font-family: 'Signika Negative', sans-serif;
-    color: white;
-    text-shadow: 0 1px 3px black, 0 3px 3px black;
+    color: black;
+    text-shadow: 0 1px 1px gray, 0 1px 1px gray;
 
 }
 
