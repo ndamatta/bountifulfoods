@@ -156,28 +156,35 @@ body main .calltoaction {
     border: 1px solid black;
     box-shadow: 3px 3px 5px 1px gray;
 }
+.home-main > div > h2 {
+    margin: 0 0 1rem 0;
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    text-shadow: 0 0 3px #DD0426, 0 0 5px black;
+
+}
 
 /* HOME - weather */
 .weather {
     display: grid;
     grid-template-columns: 1fr;
 }
-#current-weather, #forecast-weather {
+#current-weather {
     display: grid;
     grid-template-columns: 1fr;
     border: 1px solid black;
-    width: 100%;
+    width: 80%;
 }
 #current-weather h3 {
     grid-column: 1;
     grid-row: 1;
-    margin: .3rem .3rem;
+    margin: .3rem 0 1rem 0;
 }
 #current-weather #current-weather-img {
     grid-column: 1;
     grid-row: 2;
 }
-#current-weather-img img {
+#current-weather-img img, .forecast-weather img {
     background-color: #F02D3A;
     border-radius: 50px;
 }
@@ -190,14 +197,25 @@ body main .calltoaction {
     align-items: center;
     margin-right: 1rem;
 }
-#current-weather #current-weather-section p {
+#current-weather-section p, .forecast-weather .forecast-section p {
     margin: .5rem;
     padding: .1rem .7rem .1rem .7rem;
     background-color: #F02D3A;
     color: white;
     border-radius: 30px 0 30px 0;
 }
-#forecast-weather {
-    grid-column: 1;
-    grid-row: 3;
+.forecast-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
 }
+.forecast-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 1rem 0 1rem;
+}
+.forecast-card h3 {margin: .3rem 0 1rem 0;}
+
