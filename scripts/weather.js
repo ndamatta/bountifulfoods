@@ -4,7 +4,6 @@ function getCurrentWeather() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-  
       const temperature = data.main.temp;
       const description = data.weather[0].description;
       const humidity = data.main.humidity;
@@ -56,7 +55,6 @@ function getWeatherForecast() {
 
       let count = 0;
       forecastData.forEach(forecast => {
-        console.log(count)
         if (count < 3) {
           const image = forecast.weather[0].icon;
           const temperature = forecast.main.temp;
