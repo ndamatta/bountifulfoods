@@ -221,7 +221,7 @@ body main .calltoaction {
     grid-template-columns: 1fr;
     margin: 0 .3rem 0 .3rem;
 }
-.forecast-card h3 {margin: .3rem 0 1rem 0;}
+.forecast-card h3 {margin: .3rem 0 1rem 0; color: black;}
 
 /* If any screen is wider than 400px, so it doesn't break weather section */
 @media screen and (min-width: 0px) and (max-width: 400px) {
