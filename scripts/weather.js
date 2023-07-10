@@ -1,58 +1,97 @@
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=54da382318799586745f2112ab1d86ec&units=imperial';
+function getCurrentWeather() {
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=54da382318799586745f2112ab1d86ec&units=imperial';
 
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+  
+      const temperature = data.main.temp;
+      const description = data.weather[0].description;
+      const humidity = data.main.humidity;
+      const image = data.weather[0].icon;
+  
+      const weatherdiv = document.querySelector('.weather');
+      let currentWeatherDiv = document.createElement("div");
+      currentWeatherDiv.setAttribute("id", "current-weather")
+      currentWeatherDiv.innerHTML = 
+      `
+        <h3>Today</h3>
+        <div id="current-weather-img">
+          <img src="https://openweathermap.org/img/w/${image}.png" alt="Image of ${description}">
+        </div>
+        <div id="current-weather-section">
+          <p>${description.toUpperCase()}</p>
+          <p>${temperature.toFixed(1)} °F</p>
+          <p>Humidity: ${humidity}%</p>
+        </div>
+      `;
+      weatherdiv.appendChild(currentWeatherDiv)
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
 
-    const temperature = data.main.temp;
-    const description = data.weather[0].description;
-    const humidity = data.main.humidity;
-    const image = data.weather[0].icon;
+function getWeatherForecast() {
+  const url = 'https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=54da382318799586745f2112ab1d86ec&units=imperial';
 
-    let weatherdiv = document.querySelector('.weather');
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const forecastData = data.list;
 
-    let h2 = document.createElement("h2");
+      const currentDate = new Date();
+      const options = { weekday: 'long' };
+      const locale = 'en-US';
+      const nextThreeDays = Array.from({ length: 3 }, (_, i) => {
+        const date = new Date(currentDate);
+        date.setDate(date.getDate() + i + 1);
+        return date.toLocaleDateString(locale, options);
+      });
 
-    let divCurrentWeather = document.createElement("div");
-    let currentWeather = document.createElement("h3");
-    let divImg = document.createElement("div");
-    let img = document.createElement("img");
+      const weatherdiv = document.querySelector('.weather');
+      let forecastDiv = document.createElement("div");
+      forecastDiv.setAttribute("class", "forecast-weather")
+      weatherdiv.appendChild(forecastDiv);
 
-    let divCurrentWeatherSection = document.createElement("div");
-    let descriptionP = document.createElement("p");
-    let temperatureP = document.createElement("p");
-    let humidityP = document.createElement("p");
-    
-    h2.innerText = "Carlsbad Weather";
-    currentWeather.innerText = "Current Weather"
-    descriptionP.innerText = `${description.toUpperCase()}`
-    temperatureP.innerText = `${temperature.toFixed(1)} °F`
-    humidityP.innerText = `Humidity: ${humidity}%`
+      let count = 0;
+      forecastData.forEach(forecast => {
+        console.log(count)
+        if (count < 3) {
+          const image = forecast.weather[0].icon;
+          const temperature = forecast.main.temp;
+          const description = forecast.weather[0].description;
+
+          const dayOfWeek = nextThreeDays[count]
+          
+          if (nextThreeDays.includes(dayOfWeek)) {
+          
+          let forecastcard = document.createElement("div");
+          forecastcard.setAttribute("class", "forecast-card")
+          forecastcard.innerHTML = 
+          `
+          <h3>${dayOfWeek}</h3>
+          <div class="forecast-img">
+            <img src="https://openweathermap.org/img/w/${image}.png" alt="Image of ${description}">
+          </div>
+          <div class="forecast-section">
+            <p>${temperature.toFixed(1)} °F</p>
+          </div>
+          `;
+
+          forecastDiv.appendChild(forecastcard);
+          count ++;
+
+          }
+        } 
+      });
+      
+    })
+    .catch(error => {
+      console.log('Error fetching weather forecast:', error);
+    });
+}
 
 
-    weatherdiv.appendChild(h2);
-
-    weatherdiv.appendChild(divCurrentWeather);
-    divCurrentWeather.setAttribute("id", "current-weather");
-    divCurrentWeather.appendChild(currentWeather);
-
-    img.setAttribute("src", `https://openweathermap.org/img/w/${image}.png`);
-    img.setAttribute("alt", `Icon for ${description}`);
-    
-
-    divCurrentWeatherSection.setAttribute("id", "current-weather-section")
-    divCurrentWeather.appendChild(divCurrentWeatherSection);
-
-    divImg.setAttribute("id", "current-weather-img")
-    
-    divImg.appendChild(img)
-
-    divCurrentWeatherSection.appendChild(descriptionP)
-    divCurrentWeatherSection.appendChild(temperatureP)
-    divCurrentWeatherSection.appendChild(humidityP)
-    divCurrentWeather.appendChild(divImg)
-
-  })
-  .catch(error => {
-    console.log('Error:', error);
-  });
+getCurrentWeather();
+getWeatherForecast();
