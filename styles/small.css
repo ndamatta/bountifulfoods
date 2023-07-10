@@ -168,12 +168,14 @@ body main .calltoaction {
 .weather {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 1rem .5rem 1rem .5rem;
 }
 #current-weather {
     display: grid;
     grid-template-columns: 1fr;
     border: 2px dashed white;
     border-radius: 10px;
+    padding: .2rem;
 }
 #current-weather h3 {
     grid-column: 1;
@@ -188,7 +190,7 @@ body main .calltoaction {
     background-color: #F02D3A;
     border-radius: 50px;
 }
-#current-weather #current-weather-section {
+#current-weather-section {
     grid-column: 1;
     grid-row: 3;
     display: flex;
@@ -198,11 +200,11 @@ body main .calltoaction {
     margin-right: 1rem;
 }
 #current-weather-section p, .forecast-weather .forecast-section p {
-    margin: .5rem;
+    margin: .15rem;
     padding: .1rem .7rem .1rem .7rem;
     background-color: #F02D3A;
     color: white;
-    border-radius: 30px 0 30px 0;
+    border-radius: 20px 0 20px 0;
 }
 .forecast-weather {
     display: flex;
@@ -212,12 +214,22 @@ body main .calltoaction {
     border: 2px dashed white;
     border-radius: 10px;
     margin-top: .5rem;
-
+    padding: .2rem;
 }
 .forecast-card {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 1rem 0 1rem;
+    margin: 0 .3rem 0 .3rem;
 }
 .forecast-card h3 {margin: .3rem 0 1rem 0;}
 
+/* If any screen is wider than 400px, so it doesn't break weather section */
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .weather #current-weather, #current-weather-section {
+        display: flex;
+        flex-direction: column;
+    }
+   .forecast-weather {
+    flex-direction: column;
+   }
+}
