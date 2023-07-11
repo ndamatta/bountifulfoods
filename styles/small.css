@@ -229,6 +229,91 @@ body main .calltoaction {
 }
 .forecast-card h3 {margin: .3rem 0 1rem 0; color: black;}
 
+/* FRESH */
+form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form fieldset {
+    margin: .5rem 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 75%;
+    background-color: #F8A0A7;
+}
+form legend {
+    padding: .3rem .7rem;
+    margin: 0 1rem;
+    background-color: #DD0426;
+    color: white;
+    border-radius: 0 20px 0 20px;
+    border: 1.5px solid black;
+}
+form .text {
+    background-color: white;
+    padding: .1rem .3rem .05rem .3rem;
+    border-radius: 10px 10px 0 0;
+}
+form label.top, form div {
+    display: block;
+    padding-top: 1.7rem;
+    font-size: 1rem;
+}
+form label.top input, form label.top textarea {
+    display: block;
+    font-size: 1rem;
+    border: solid 2px black;
+    border-radius: 3px;
+    padding: 1rem;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    background-color: white
+}
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    font-size: 1rem;
+}
+form input.submitBtn {
+    border: none;
+    display: block;
+    font-size: 1.2rem;
+    border: solid 2px black;
+    background-color: #DD0426;
+    color: white;
+    padding: .75rem 1.5rem;
+    width: 96%;
+    max-width: 15rem;
+    border-radius: 1rem;
+}
+form input.submitBtn:hover {
+    background-color: rgba(137, 178, 192, .9);
+}
+form label.top input:required {
+    border-left: #DD0426 solid 6px;
+}
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+form div select {
+    display: block;
+    font-size: 1rem;
+    border: solid 2px black;
+    border-radius: 3px;
+    padding: .5rem;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    background-color: white;
+    margin: 1rem 0 1rem 0;
+}
+
+
 /* If any screen is wider than 400px, so it doesn't break weather section */
 @media screen and (min-width: 0px) and (max-width: 400px) {
     .weather #current-weather, #current-weather-section {
@@ -239,3 +324,4 @@ body main .calltoaction {
     flex-direction: column;
    }
 }
+

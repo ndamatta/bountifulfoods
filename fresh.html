@@ -38,7 +38,31 @@
     </header>
 
     <main>
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Your info</legend>
+                <label class="top"><span class="text">First Name*</span><input type="text" name="fname" required></label>
+                <label class="top"><span class="text">Email*</span><input type="email" name="email" placeholder="someone@example.com" required></label>
+                <label class="top"><span class="text">Phone Number*</span><input type="tel" name="phone" required></label>
+            </fieldset>
 
+            <fieldset>
+                <legend>Your drink!</legend>
+                <p><span class="text">Select the ingredients for your drink!</span></p>
+                <div class="ingredients">
+                    <select name="fruit1" id="ingredientList1">
+                        <option value="">Select an ingredient</option>
+                      </select>
+                    <select name="fruit2" id="ingredientList2">
+                        <option value="">Select an ingredient</option>
+                    </select>
+                    <select name="fruit3" id="ingredientList3">
+                        <option value="">Select an ingredient</option>
+                    </select>
+                </div>
+            </fieldset>
+            <input type="submit" value="Build my drink!" class="submitBtn" onclick="getHiddenDate()" name="submitButton">
+        </form>
     </main>
 
     <footer>
@@ -57,6 +81,8 @@
             <p class="lastmodified"></p>
         </div>
     </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/fresh.js"></script>
 </body>
-<script src="scripts/main.js"></script>
+
 </html>
