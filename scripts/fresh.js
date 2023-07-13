@@ -24,6 +24,14 @@ fetch(url)
 
 // DISPLAY NUTRITION
 function calculateTotalNutrition() {
+  /* Elements to display */
+  const mainElement = document.querySelector(".fresh-main");
+  const nutritionDiv = document.createElement('div');
+  nutritionDiv.setAttribute("class", "nutritionDiv");
+
+  nutritionDiv.remove()
+
+  /* Lists with ingredients */
   const ingredientList1 = document.querySelector('#ingredientList1');
   const ingredientList2 = document.querySelector('#ingredientList2');
   const ingredientList3 = document.querySelector('#ingredientList3');
@@ -58,9 +66,6 @@ function calculateTotalNutrition() {
         };
       }, { carbohydrates: 0, protein: 0, fat: 0, calories: 0, sugar: 0 });
 
-      const nutritionDiv = document.createElement('div');
-      nutritionDiv.setAttribute("class", "nutritionDiv");
-
       nutritionDiv.innerHTML = 
       `
       <h2>Your drink's info</h2>
@@ -91,23 +96,9 @@ function calculateTotalNutrition() {
         </tr>
       </table>
       `;
-
-      const resultContainer = document.getElementById('result-container');
-      resultContainer.innerHTML = '';
-      resultContainer.appendChild(nutritionDiv);
+      mainElement.appendChild(nutritionDiv);
     })
     .catch(error => {
-      console.error('Error fetching fruit data:', error);
+      console.error(error);
     });
 }
-
-
-
-// <h2>Your drink's nutritionals:</h2>
-//       <div class="nutri-info">
-//         <p>Carbohydrates: ${totalNutrition.carbohydrates}g</p>
-//         <p>Protein: ${totalNutrition.protein}g</p>
-//         <p>Fat: ${totalNutrition.fat}g</p>
-//         <p>Calories: ${totalNutrition.calories}g</p>
-//         <p>Sugar: ${totalNutrition.sugar}g</p>
-//       </div>

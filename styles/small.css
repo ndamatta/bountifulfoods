@@ -242,7 +242,7 @@ form fieldset {
     border: 2px solid black;
     border-radius: 4px;
     padding: 1rem;
-    width: 70%;
+    width: 80%;
     background-color: #F8A0A7;
 }
 form legend {
@@ -257,6 +257,7 @@ form .text {
     background-color: white;
     padding: .1rem .3rem .05rem .1rem;
     border-radius: 10px 10px 0 0;
+    border: 1px solid black;
 }
 form label.top, form div {
     display: block;
@@ -274,11 +275,6 @@ form label.top input, form label.top textarea {
     max-width: 50%;
     background-color: white
 }
-form label.sbs {
-    display: block;
-    padding: .75rem 0;
-    font-size: 1rem;
-}
 form input.submitBtn {
     border: none;
     display: block;
@@ -291,15 +287,9 @@ form input.submitBtn {
     max-width: 15rem;
     border-radius: 1rem;
 }
-form input.submitBtn:hover {
-    background-color: rgba(137, 178, 192, .9);
-}
-form label.top input:required {
-    border-left: #DD0426 solid 6px;
-}
-form label.top input:required:valid {
-    border-left: green solid 6px;
-}
+form input.submitBtn:hover {background-color: rgba(137, 178, 192, .9);}
+form label.top input:required {border-left: #DD0426 solid 4px;}
+form label.top input:required:valid {border-left: green solid 4px;}
 form div select {
     display: block;
     font-size: 1rem;
@@ -313,15 +303,18 @@ form div select {
     margin: 1rem 0 1rem 0;
 }
 form fieldset .ingredients {padding: 0;}
-form fieldset .ingredient-text {
-    margin: 0;
-    border-radius: 10px 10px 8px 8px;
+form fieldset .ingredient-text {margin: 0;}
+form fieldset .ingredient-text .text {
+    border-radius: 10px 10px 0 0;
+    padding: .4rem .6rem 0 .2rem;
 }
-.nutritionDiv{
+.nutritionDiv {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 2rem auto;
 }
 .fresh-main table, th, td {
     border: 1.5px solid black;
@@ -334,16 +327,12 @@ form fieldset .ingredient-text {
 }
 .fresh-main table td {padding: .5rem .8rem .5rem .8rem;}
 
-
-
-/* If any screen is wider than 400px, so it doesn't break weather section */
+/* If any screen is wider than 400px, change the weather to columns, so it doesn't the section */
 @media screen and (min-width: 0px) and (max-width: 400px) {
     .weather #current-weather, #current-weather-section {
         display: flex;
         flex-direction: column;
     }
-   .forecast-weather {
-    flex-direction: column;
-   }
+   .forecast-weather {flex-direction: column;}
 }
 
