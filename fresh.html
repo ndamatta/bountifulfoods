@@ -48,22 +48,22 @@
 
             <fieldset>
                 <legend>Your drink!</legend>
-                <p class="ingredient-text">Select the ingredients for your drink!</p>
+                <p><span class="ingredient-text">Click the boxes and select the ingredients for your drink!</span></p>
                 <div class="ingredients">
                     <select name="fruit1" id="ingredientList1">
-                        <option value="">Select an ingredient</option>
+                        <option value="">Ingredient 1</option>
                       </select>
                     <select name="fruit2" id="ingredientList2">
-                        <option value="">Select an ingredient</option>
+                        <option value="">Ingredient 2</option>
                     </select>
                     <select name="fruit3" id="ingredientList3">
-                        <option value="">Select an ingredient</option>
+                        <option value="">Ingredient 3</option>
                     </select>
-                    <label class="top">Additional instructions<textarea name="description" cols="30" rows="7"></textarea></label>
-
+                    <label class="top"><span class="ingredient-text">Let us know any additional instruction</span><textarea name="instructions" cols="30" rows="7"></textarea></label>
                 </div>
             </fieldset>
-            <input type="submit" value="Build my drink!" class="submitBtn" onclick="calculateTotalNutrition()" name="submitButton">
+
+            <input type="submit" value="Build my drink!" class="submitBtn" name="submitButton">
         </form>
     </main>
 

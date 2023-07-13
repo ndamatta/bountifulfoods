@@ -23,13 +23,8 @@ fetch(url)
     });
 
 // DISPLAY NUTRITION
-function calculateTotalNutrition() {
-  /* Elements to display */
-  const mainElement = document.querySelector(".fresh-main");
-  const nutritionDiv = document.createElement('div');
-  nutritionDiv.setAttribute("class", "nutritionDiv");
-
-  nutritionDiv.remove()
+function calculateTotalNutrition(event) {
+  event.preventDefault();
 
   /* Lists with ingredients */
   const ingredientList1 = document.querySelector('#ingredientList1');
@@ -46,9 +41,10 @@ function calculateTotalNutrition() {
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
 
-  // if (fname.trim() === '' || email.trim() === '' || phone.trim() === '') {
-  //   return;
-  // }
+  // Quit the function if the required form values are empty
+  if (fname.trim() === '' || email.trim() === '' || phone.trim() === '') {
+    return;
+  }
 
   fetch(url)
     .then(response => response.json())
@@ -65,6 +61,17 @@ function calculateTotalNutrition() {
           sugar: sum.sugar + sugar
         };
       }, { carbohydrates: 0, protein: 0, fat: 0, calories: 0, sugar: 0 });
+
+      const mainElement = document.querySelector(".fresh-main");
+      let nutritionDiv = document.querySelector(".nutritionDiv");
+
+      // Check if nutrition is in the HTML, if true, remove it's content.
+      if (!nutritionDiv) {
+        nutritionDiv = document.createElement('div');
+        nutritionDiv.setAttribute("class", "nutritionDiv");
+      } else {
+        nutritionDiv.innerHTML = "";
+      }
 
       nutritionDiv.innerHTML = 
       `
@@ -102,3 +109,5 @@ function calculateTotalNutrition() {
       console.error(error);
     });
 }
+const form = document.querySelector('.fresh-main form');
+form.addEventListener('submit', calculateTotalNutrition);
