@@ -28,4 +28,8 @@
         padding: .1rem 1rem .1rem 1rem;
     }
     .forecast-card {margin: 0 2rem 0 2rem;}
+
+    /* FRESH */
+    .fresh-main form fieldset {width: 40%;}
+
 }

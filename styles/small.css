@@ -242,7 +242,7 @@ form fieldset {
     border: 2px solid black;
     border-radius: 4px;
     padding: 1rem;
-    width: 75%;
+    width: 70%;
     background-color: #F8A0A7;
 }
 form legend {
@@ -255,7 +255,7 @@ form legend {
 }
 form .text {
     background-color: white;
-    padding: .1rem .3rem .05rem .3rem;
+    padding: .1rem .3rem .05rem .1rem;
     border-radius: 10px 10px 0 0;
 }
 form label.top, form div {
@@ -266,7 +266,7 @@ form label.top, form div {
 form label.top input, form label.top textarea {
     display: block;
     font-size: 1rem;
-    border: solid 2px black;
+    border: solid 1px black;
     border-radius: 3px;
     padding: 1rem;
     width: 50%;
@@ -311,6 +311,11 @@ form div select {
     max-width: 50%;
     background-color: white;
     margin: 1rem 0 1rem 0;
+}
+form fieldset .ingredients {padding: 0;}
+form fieldset .ingredient-text {
+    margin: 0;
+    border-radius: 10px 10px 8px 8px;
 }
 
 
