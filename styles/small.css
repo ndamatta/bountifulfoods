@@ -149,10 +149,10 @@ body main .calltoaction {
 .home-main a:hover {transform: scale(1.05);}
 
 /* HOME - main */
-.home-main {
+main {
     font-family: 'Montserrat', sans-serif;
 }
-.home-main > div {
+main > div {
     background-color: #F8A0A7;
     margin: 1rem;
     padding: 1rem 1rem;
@@ -160,7 +160,7 @@ body main .calltoaction {
     border: 1px solid black;
     box-shadow: 3px 3px 5px 1px gray;
 }
-.home-main > div > h2 {
+main > div > h2 {
     margin: 0 0 1rem 0;
     font-family: 'Signika Negative', sans-serif;
     color: black;
@@ -317,6 +317,23 @@ form fieldset .ingredient-text {
     margin: 0;
     border-radius: 10px 10px 8px 8px;
 }
+.nutritionDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fresh-main table, th, td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+  }
+.fresh-main table th {
+    padding: .8rem 1rem .8rem 1rem;
+    background-color: #DD0426;
+    color: white;
+}
+.fresh-main table td {padding: .5rem .8rem .5rem .8rem;}
+
 
 
 /* If any screen is wider than 400px, so it doesn't break weather section */

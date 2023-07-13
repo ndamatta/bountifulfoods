@@ -37,18 +37,18 @@
         </nav>
     </header>
 
-    <main>
-        <form method="get" action="thankyou.html">
+    <main class="fresh-main">
+        <form method="get">
             <fieldset>
                 <legend>Your info</legend>
-                <label class="top"><span class="text">First Name*</span><input type="text" name="fname" required></label>
-                <label class="top"><span class="text">Email*</span><input type="email" name="email" placeholder="someone@example.com" required></label>
-                <label class="top"><span class="text">Phone Number*</span><input type="tel" name="phone" required></label>
+                <label class="top"><span class="text">First Name*</span><input type="text" name="fname" id="fname" required></label>
+                <label class="top"><span class="text">Email*</span><input type="email" name="email" id="email" placeholder="someone@example.com" required></label>
+                <label class="top"><span class="text">Phone Number*</span><input type="tel" name="phone" id="phone" required></label>
             </fieldset>
 
             <fieldset>
                 <legend>Your drink!</legend>
-                <p><span class="text">Select the ingredients for your drink!</span></p>
+                <p class="ingredient-text"><span class="text">Select the ingredients for your drink!</span></p>
                 <div class="ingredients">
                     <select name="fruit1" id="ingredientList1">
                         <option value="">Select an ingredient</option>
@@ -59,10 +59,13 @@
                     <select name="fruit3" id="ingredientList3">
                         <option value="">Select an ingredient</option>
                     </select>
+                    <label class="top"><span class="text">Additional instructions</span><textarea name="description" cols="30" rows="7"></textarea></label>
+
                 </div>
             </fieldset>
-            <input type="submit" value="Build my drink!" class="submitBtn" onclick="getHiddenDate()" name="submitButton">
+            <input type="submit" value="Build my drink!" class="submitBtn" onclick="calculateTotalNutrition()" name="submitButton">
         </form>
+        <div id="result-container"></div>
     </main>
 
     <footer>
