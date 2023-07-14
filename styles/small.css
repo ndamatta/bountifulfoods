@@ -313,9 +313,27 @@ form fieldset textarea {margin-top: 1rem;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    width: 70%;
     margin: 2rem auto;
+    padding: 1rem;
 }
+.nutritionDiv .order-info {
+    background-color: white;
+    padding: 0 .3rem 0 .3rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: fit-content;
+    word-break: break-all;
+}
+.nutritionDiv .order-fruits {
+    margin: 1rem 0 1rem 0;
+    background-color: white;
+    padding: .3rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    word-break: break-all;
+}
+.order-fruits p {margin: .3rem 0 .3rem 0;}
 .fresh-main table, th, td {
     border: 1.5px solid black;
     border-collapse: collapse;
@@ -326,6 +344,7 @@ form fieldset textarea {margin-top: 1rem;}
     color: white;
 }
 .fresh-main table td {padding: .5rem .8rem .5rem .8rem;}
+
 
 /* If any screen is wider than 400px, change the weather to columns, so it doesn't the section */
 @media screen and (min-width: 0px) and (max-width: 400px) {

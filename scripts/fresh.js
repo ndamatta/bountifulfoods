@@ -37,9 +37,10 @@ function calculateTotalNutrition(event) {
     ingredientList3.options[ingredientList3.selectedIndex].text
   ];
 
-  const fname = document.getElementById('fname').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
+  const fname = document.querySelector('#fname').value;
+  const email = document.querySelector('#email').value;
+  const phone = document.querySelector('#phone').value;
+  const instructions = document.querySelector('#instructions').value;
 
   // Quit the function if the required form values are empty
   if (fname.trim() === '' || email.trim() === '' || phone.trim() === '') {
@@ -75,7 +76,17 @@ function calculateTotalNutrition(event) {
 
       nutritionDiv.innerHTML = 
       `
-      <h2>Your drink's info</h2>
+      <h2>Your order 🍉</h2>
+      <div class="order-info">
+        <p><b>${fname}</b></p>
+        <p>${email}</p>
+        <p>${phone}</p>
+        <p>${getCurrentDate()}</p>
+      </div>
+      <div class="order-fruits">
+      <p>${checkIfInstructionEmpty(instructions)}</p>
+      <p>${checkIfIngredientEmpty(ingredientList1.options[ingredientList1.selectedIndex].text)} | ${checkIfIngredientEmpty(ingredientList2.options[ingredientList2.selectedIndex].text)} | ${checkIfIngredientEmpty(ingredientList3.options[ingredientList3.selectedIndex].text)}</p>
+      </div>
       <table>
         <tr>
           <th>Nutrient</th>
@@ -109,5 +120,24 @@ function calculateTotalNutrition(event) {
       console.error(error);
     });
 }
+function checkIfInstructionEmpty(instruction) {
+  if (instruction == "") {
+    return "No instructions"
+  }
+  return `"${instruction}"`
+}
+function checkIfIngredientEmpty(ingredient) {
+ if (ingredient == "Ingredient 1" || ingredient == "Ingredient 2" || ingredient == "Ingredient 3") {
+  return "X"
+ }
+ return ingredient
+}
+function getCurrentDate() {
+  let date = new Date();
+  let formattedDate = date.toLocaleString()
+  return formattedDate;
+
+}
 const form = document.querySelector('.fresh-main form');
 form.addEventListener('submit', calculateTotalNutrition);
+form.addEventListener('submit', getCurrentDate);
