@@ -57,3 +57,17 @@ const currentYearOptions = {
 };
 lastModified.textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString("en-US", lastModifiedOptions)}`;
 currentYear.textContent = `${new Date().toLocaleDateString("en-US", currentYearOptions)}`
+
+//
+const drinksH2 = document.querySelector('#drinks h2')
+if (drinksH2) {
+    drinksH2.textContent = displayDrinks();
+}
+function displayDrinks() {
+    if (localStorage.getItem('drinksTotal') == 0) {
+        return "You didn't build any drink yet!"
+    }
+    else {
+        return `You built ${localStorage.getItem('drinksTotal')} drinks`
+    }
+}

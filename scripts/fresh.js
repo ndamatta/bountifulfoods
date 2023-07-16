@@ -1,3 +1,4 @@
+// FETCH TO GET INGREDIENTS
 const url = 'https://brotherblazzard.github.io/canvas-content/fruit.json'
 
 const ingredientList = document.querySelector('.ingredientList');
@@ -141,3 +142,19 @@ function getCurrentDate() {
 const form = document.querySelector('.fresh-main form');
 form.addEventListener('submit', calculateTotalNutrition);
 form.addEventListener('submit', getCurrentDate);
+
+//
+function updateDrinksTotal() {
+  let count = localStorage.getItem('drinksTotal');
+  if (!count) {
+      count = 0;
+  } else {
+      count = parseInt(count);
+  }
+  count++;
+  localStorage.setItem('drinksTotal', count);
+}
+document.querySelector('.fresh-main form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  updateDrinksTotal();
+});
