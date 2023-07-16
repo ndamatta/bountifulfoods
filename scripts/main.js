@@ -64,7 +64,7 @@ if (drinksH2) {
     drinksH2.textContent = displayDrinks();
 }
 function displayDrinks() {
-    if (localStorage.getItem('drinksTotal') == 0) {
+    if (localStorage.getItem('drinksTotal') == 0 || localStorage.getItem('drinksTotal') == null) {
         return "You didn't build any drink yet!"
     }
     else {

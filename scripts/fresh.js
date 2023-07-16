@@ -146,6 +146,7 @@ form.addEventListener('submit', getCurrentDate);
 //
 function updateDrinksTotal() {
   let count = localStorage.getItem('drinksTotal');
+  localStorage.setItem('drinksTotal', 0);
   if (!count) {
       count = 0;
   } else {
