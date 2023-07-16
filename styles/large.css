@@ -12,6 +12,12 @@
     .forecast-weather {
         grid-column: 2;
     }
+    /* HOME - drinks */
+    #drinks h2 {font-size: 1.8rem;}
+    .drink-title {
+        padding: .3rem;
+        line-height: 2.8rem;
+    }
     /* HOME - weather */
     .weather {
         grid-template-columns: repeat(4, 1fr);

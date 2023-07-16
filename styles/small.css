@@ -168,6 +168,31 @@ main > div > h2 {
 
 }
 
+/* HOME - drinks card */
+#drinks {
+    padding: 0;
+    position: relative;
+}
+#drinks h2 {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    bottom: 0;
+    margin: auto;
+}
+.drink-title {
+    background-color: white;
+    padding: .2rem;
+    line-height: 2rem;
+}
+#drinks img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
 /* HOME - weather */
 .weather {
     display: grid;
