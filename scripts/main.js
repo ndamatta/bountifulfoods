@@ -11,7 +11,7 @@ if (x) {x.onclick = toggleMenu;}
 const imagesToLoad = document.querySelectorAll(".home-main img[data-src]");
 
 const imgOptions = {
-    threshold: 1,
+    threshold: 0,
     rootMargin: "0px 0px 50px 0px"
 };
 

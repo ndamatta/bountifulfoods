@@ -370,6 +370,28 @@ form fieldset textarea {margin-top: 1rem;}
 }
 .fresh-main table td {padding: .5rem .8rem .5rem .8rem;}
 
+/* ABOUT US */
+.aboutus-main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.aboutus-main div {
+    width: 85%;
+    margin: 1rem auto;
+}
+#welcome-image {
+    padding: 0;
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+}
+#welcome-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+}
+
 
 /* If any screen is wider than 400px, change the weather to columns, so it doesn't the section */
 @media screen and (min-width: 0px) and (max-width: 400px) {
