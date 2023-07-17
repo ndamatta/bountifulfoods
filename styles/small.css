@@ -127,11 +127,13 @@ body main .calltoaction {
     position: relative;
     padding: 0;
     background-color: #F02D3A;
+    
 }
 .calltoaction img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 4px;
 }
 .home-main a {
     position: absolute;
@@ -156,9 +158,9 @@ main > div {
     background-color: #F8A0A7;
     margin: 1rem;
     padding: 1rem 1rem;
+    border-radius: 4px;
     text-align: center;
-    border: 1px solid black;
-    box-shadow: 3px 3px 5px 1px gray;
+    box-shadow: 3px 3px 7px 1px gray;
 }
 main > div > h2 {
     margin: 0 0 1rem 0;
@@ -202,7 +204,8 @@ main > div > h2 {
 #current-weather {
     display: grid;
     grid-template-columns: 1fr;
-    border: 2px dashed black;
+    border: 2px solid black;
+    box-shadow: 3px 3px 7px 1px gray;
     border-radius: 10px;
     padding: .2rem;
 }
@@ -242,10 +245,11 @@ main > div > h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px dashed black;
+    border: 2px solid black;
     border-radius: 10px;
     margin-top: .5rem;
     padding: .2rem;
+    box-shadow: 3px 3px 7px 1px gray;
 }
 .forecast-card {
     display: grid;
@@ -264,11 +268,11 @@ form {
 
 form fieldset {
     margin: .5rem 0;
-    border: 2px solid black;
     border-radius: 4px;
     padding: 1rem;
     width: 80%;
     background-color: #F8A0A7;
+    box-shadow: 3px 3px 7px 1px gray;
 }
 form legend {
     padding: .3rem .7rem;
@@ -282,7 +286,7 @@ form .text {
     background-color: white;
     padding: .1rem .3rem .05rem .1rem;
     border-radius: 10px 10px 0 0;
-    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px gray;
 }
 form label.top, form div {
     display: block;
@@ -292,7 +296,7 @@ form label.top, form div {
 form label.top input, form label.top textarea {
     display: block;
     font-size: 1rem;
-    border: solid 1px black;
+    box-shadow: 3px 3px 7px 1px gray;
     border-radius: 3px;
     padding: 1rem;
     width: 50%;
@@ -318,7 +322,7 @@ form label.top input:required:valid {border-left: green solid 4px;}
 form div select {
     display: block;
     font-size: 1rem;
-    border: solid 2px black;
+    box-shadow: 3px 3px 7px 1px gray;
     border-radius: 3px;
     padding: .5rem;
     width: 70%;
@@ -346,7 +350,7 @@ form fieldset textarea {margin-top: 1rem;}
     background-color: white;
     padding: 0 .3rem 0 .3rem;
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px gray;
     width: fit-content;
     word-break: break-all;
 }
@@ -355,7 +359,7 @@ form fieldset textarea {margin-top: 1rem;}
     background-color: white;
     padding: .3rem;
     border-radius: 15px;
-    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px gray;
     word-break: break-all;
 }
 .order-fruits p {margin: .3rem 0 .3rem 0;}
@@ -378,12 +382,14 @@ form fieldset textarea {margin-top: 1rem;}
 .aboutus-main div {
     width: 85%;
     margin: 1rem auto;
+    border: none;
 }
 #welcome-image {
     padding: 0;
-    width: 80%;
+    width: 100%;
     height: 150px;
     margin: 0 auto;
+    border: none;
 }
 #welcome-image img{
     width: 100%;

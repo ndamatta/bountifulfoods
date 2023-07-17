@@ -94,4 +94,23 @@
         grid-row: 2/4;
     }
 
+    /* ABOUT US */
+    .aboutus-main {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    #welcome-image {grid-column: 1/3}
+    .company-info {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .company-contact {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .google-maps {
+        grid-column: 2;
+        grid-row: 2/4;
+    }
+
 }
