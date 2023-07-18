@@ -397,6 +397,11 @@ form fieldset textarea {margin-top: 1rem;}
     object-fit: cover;
     padding: 0;
 }
+#map {padding: .5rem;}
+#map iframe{
+    width: 100%;
+    height: 100%;
+}
 
 
 /* If any screen is wider than 400px, change the weather to columns, so it doesn't the section */
