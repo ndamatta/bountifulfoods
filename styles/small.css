@@ -103,6 +103,7 @@ footer .address, footer .phone, footer .email {
     font-size: .9rem;
     font-weight: bold;
 }
+
 footer .address {transition: transform .1s;}
 footer .address:hover{transform: scale(1.03);}
 footer .contact-info1 {
@@ -112,6 +113,7 @@ footer .contact-info1 {
     align-items: center;
     padding-bottom: .5rem;
 }
+footer .contact-info1 .email {word-break: break-all;}
 footer .my-info {
     background-color: #F02D3A;
     border-top: 1px dashed white;
@@ -168,6 +170,11 @@ main > div > h2 {
     color: black;
     text-shadow: 0 1px 1px gray, 0 1px 1px gray;
 
+}
+.area-info p {
+    background-color: white;
+    padding: .3rem;
+    border-radius: 5px;
 }
 
 /* HOME - drinks card */
@@ -284,7 +291,7 @@ form legend {
 }
 form .text {
     background-color: white;
-    padding: .1rem .3rem .05rem .1rem;
+    padding: .1rem .3rem 0.1rem;
     border-radius: 10px 10px 0 0;
     box-shadow: 3px 3px 7px 1px gray;
 }
@@ -379,14 +386,15 @@ form fieldset textarea {margin-top: 1rem;}
     display: grid;
     grid-template-columns: 1fr;
 }
-.aboutus-main div {
-    width: 85%;
+.aboutus-main > div {
+    width: 80%;
     margin: 1rem auto;
     border: none;
+    padding: .5rem;
 }
 #welcome-image {
     padding: 0;
-    width: 100%;
+    width: 85%;
     height: 150px;
     margin: 0 auto;
     border: none;
@@ -396,13 +404,39 @@ form fieldset textarea {margin-top: 1rem;}
     height: 100%;
     object-fit: cover;
     padding: 0;
+    border-radius: 5px;
 }
 #map {padding: .5rem;}
 #map iframe{
     width: 100%;
     height: 100%;
 }
+.company-info p b {text-shadow: 0 1px 1px gray, 0 1px 1px white;}
+.company-info p {
+    background-color: white;
+    border-radius: 5px;
+    padding: .3rem;
+    box-shadow: 2px 2px 5px 1px #333;
 
+}
+.company-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+.company-contact p {
+    background-color: white;
+    border-radius: 5px;
+    padding: .3rem;
+    margin: .5rem;
+    box-shadow: 2px 2px 5px 1px #333;
+}
+.company-contact p:last-child {
+    word-wrap: break-word;
+}
+.company-contact div {margin: 0;}
 
 /* If any screen is wider than 400px, change the weather to columns, so it doesn't the section */
 @media screen and (min-width: 0px) and (max-width: 400px) {
