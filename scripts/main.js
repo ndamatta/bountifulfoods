@@ -8,7 +8,7 @@ const x = document.getElementById("hamburgerBtn")
 if (x) {x.onclick = toggleMenu;}
 
 // LAZY LOAD
-const imagesToLoad = document.querySelectorAll(".home-main img[data-src]");
+const imagesToLoad = document.querySelectorAll(".home-main img[data-src], .aboutus-main img[data-src]");
 
 const imgOptions = {
     threshold: 0,
