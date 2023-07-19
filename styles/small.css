@@ -105,7 +105,7 @@ footer .address, footer .phone, footer .email {
 }
 
 footer .address {transition: transform .1s;}
-footer .address:hover{transform: scale(1.03);}
+footer .address:hover{transform: scale(1.05);}
 footer .contact-info1 {
     display: flex;
     flex-direction: column;
@@ -291,9 +291,9 @@ form legend {
 }
 form .text {
     background-color: white;
-    padding: .1rem .3rem 0.1rem;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 3px 3px 7px 1px gray;
+    padding: .1rem .3rem 0;
+    border-radius: 10px 10px 0 3px;
+    box-shadow: 0px 0px 2px 1px gray;
 }
 form label.top, form div {
     display: block;
@@ -305,6 +305,7 @@ form label.top input, form label.top textarea {
     font-size: 1rem;
     box-shadow: 3px 3px 7px 1px gray;
     border-radius: 3px;
+    border: none;
     padding: 1rem;
     width: 50%;
     min-width: 50%;
@@ -322,8 +323,9 @@ form input.submitBtn {
     width: 96%;
     max-width: 15rem;
     border-radius: 1rem;
+    transition: transform .1s;
 }
-form input.submitBtn:hover {background-color: rgba(137, 178, 192, .9);}
+form input.submitBtn:hover {transform: scale(1.05);}
 form label.top input:required {border-left: #DD0426 solid 4px;}
 form label.top input:required:valid {border-left: green solid 4px;}
 form div select {
@@ -337,7 +339,7 @@ form div select {
     max-width: 70%;
     background-color: white;
     margin: 1rem 0 1rem 0;
-}
+}   
 form fieldset .ingredients {padding: 0;}
 form fieldset .ingredient-text {
     background-color: white;
